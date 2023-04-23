@@ -1,6 +1,4 @@
 # Stocks api + cli
 
 ## suported stocks:
-- Apple
-- Tesla
-- Netflix
+- all NASDAQ stocks
