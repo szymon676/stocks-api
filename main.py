@@ -16,7 +16,7 @@ def getStockRecommendation(stockname: str) -> str:
          symbol=f'{stockname}',
          screener="america",
          exchange="NASDAQ",
-         interval=Interval.INTERVAL_1_DAY
+         interval=Interval.INTERVAL_1_MINUTE 
      )
 
     recom = stock.get_analysis().summary["RECOMMENDATION"]
