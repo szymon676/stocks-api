@@ -9,7 +9,7 @@ def handle_recommendation(stock: str):
         recom = getStockRecommendation(stock)
     except:
         return "wrong stock name"
-    return recom
+    return {"data":{"stockname":stock,"recommendation":recom}}
 
 def getStockRecommendation(stockname: str) -> str:
     stock = TA_Handler(
@@ -20,7 +20,7 @@ def getStockRecommendation(stockname: str) -> str:
      )
 
     recom = stock.get_analysis().summary["RECOMMENDATION"]
-    return f'recommendation for {stockname}: {recom}'
+    return recom
 
 
 def main():
